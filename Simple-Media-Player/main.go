@@ -48,6 +48,7 @@ func handlePlayCommands(tokens []string) {
 	e := lib.Find(tokens[1])
 	if e == nil {
 		fmt.Println("The music", tokens[1], "does not exist.")
+		return
 	}
 	mp.Play(e.Name, e.Type)
 }
